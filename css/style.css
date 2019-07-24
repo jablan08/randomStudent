@@ -5,5 +5,9 @@
 }
 
 #restart-btn {
-    display: none;
+    visibility: hidden;
+}
+
+#message {
+    visibility: hidden;
 }

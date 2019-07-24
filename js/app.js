@@ -19,6 +19,7 @@ const restart = () => {
     if (students.length === 0) {
         restartBtn.style.visibility = "visible";
         message.style.visibility = "visible";
+        btn.style.visibility = "hidden";
     };
 };
 const randomIT = () => {
@@ -34,6 +35,7 @@ const resetNames = () => {
         students.push(s)
     });
     picked.splice(0, picked.length);
+    btn.style.visibility = "visible";
     restartBtn.style.visibility = "hidden";
     message.style.visibility = "hidden";
     student.innerHTML = "???";

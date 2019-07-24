@@ -15,31 +15,28 @@ restartBtn.addEventListener("click", () => {
     resetNames();
 });
 
-
 const restart = () => {
     if (students.length === 0) {
         restartBtn.style.visibility = "visible";
         message.style.visibility = "visible";
-    }
-    
+    };
 };
 const randomIT = () => {
-    let ranNUM = Math.floor(Math.random(1)*students.length)
-    picked.unshift(students[ranNUM])
-    students.splice(ranNUM, 1)
-    student.innerHTML = picked[0]
+    let ranNUM = Math.floor(Math.random(1)*students.length);
+    picked.unshift(students[ranNUM]);
+    students.splice(ranNUM, 1);
+    student.innerHTML = picked[0];
     restart();
 };
 
 const resetNames = () => {
     picked.forEach((s)=>{
         students.push(s)
-    })
-    picked.splice(0, picked.length)
+    });
+    picked.splice(0, picked.length);
     restartBtn.style.visibility = "hidden";
     message.style.visibility = "hidden";
-    student.innerHTML = "???"
-
+    student.innerHTML = "???";
 };
 
 

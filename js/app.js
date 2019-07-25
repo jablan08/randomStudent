@@ -8,9 +8,15 @@ const students = ["Dan", "Dave", "Leo", "Marques", "Muhammed", "Nick", "Perice",
 
 const picked = [];
 
-btn.addEventListener("click", () => {
-    randomIT();
-});
+const randomIT = () => {
+    let ranNUM = Math.floor(Math.random(1)*students.length);
+    picked.unshift(students[ranNUM]);
+    students.splice(ranNUM, 1);
+    student.innerHTML = picked[0];
+    console.log("hit")
+    restart();
+};
+btn.addEventListener("click", randomIT)
 restartBtn.addEventListener("click", () => {
     resetNames();
 });
@@ -21,13 +27,6 @@ const restart = () => {
         message.style.visibility = "visible";
         btn.style.visibility = "hidden";
     };
-};
-const randomIT = () => {
-    let ranNUM = Math.floor(Math.random(1)*students.length);
-    picked.unshift(students[ranNUM]);
-    students.splice(ranNUM, 1);
-    student.innerHTML = picked[0];
-    restart();
 };
 
 const resetNames = () => {

@@ -4,7 +4,7 @@ const restartBtn = document.getElementById("restart-btn");
 const message = document.getElementById("message");
 
 
-const students = ["Justin", "Josh", "Bob", "Billy"];
+const students = ["Justin", "Josh", "Bob", "Billy", "Mike", "Rei"];
 
 const picked = [];
 

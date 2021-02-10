@@ -13,7 +13,6 @@ const randomIT = () => {
     picked.unshift(students[ranNUM]);
     students.splice(ranNUM, 1);
     student.innerHTML = picked[0];
-    console.log("hit")
     restart();
 };
 btn.addEventListener("click", randomIT)
